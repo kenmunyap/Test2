@@ -15,14 +15,26 @@
 - :test: test_Institution_select_for_two_institution
   :line: 126
   :message: ''
+- :test: test_UniversityCollege_2_is_not_same_element
+  :line: 151
+  :message: ''
+- :test: test_UniversityCollege_1_is_not_same_element_1_is_same
+  :line: 169
+  :message: ''
+- :test: test_UniversityCollege_2_is_same_element
+  :line: 187
+  :message: ''
 - :test: test_Institution_select_for_three_institution
-  :line: 152
+  :line: 206
+  :message: ''
+- :test: test_wasEstablishedBefore_1980_2011
+  :line: 235
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 5
-  :passed: 5
+  :total: 9
+  :passed: 9
   :failed: 0
   :ignored: 0
 :stdout: []

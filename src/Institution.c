@@ -69,7 +69,26 @@ int isUniversityCollege(void *elem1,void *type){
 		}
 }
 
+int wasEstablishedBefore(void *elem1,void *year){
 
+		
+		Institution *dataElement;
+		int overYearofEstablish;
+		int *InstitutionYear = year;
+		dataElement = elem1;
+		
+		if(dataElement->yearEstablished >2014){
+			Throw(overYearofEstablish);
+		}
+		
+		if(dataElement->yearEstablished == *InstitutionYear){	
+			return 1;
+		}
+		else{
+			return 0;
+		}
+
+}
 
 
 

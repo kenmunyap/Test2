@@ -44,7 +44,11 @@ extern void test_Reverse_2_element_in_same_Linked_list(void);
 extern void test_Reverse_3_element_in_same_Linked_list(void);
 extern void test_Reverse_4_element_in_same_Linked_list(void);
 extern void test_Institution_select_for_two_institution(void);
+extern void test_UniversityCollege_2_is_not_same_element(void);
+extern void test_UniversityCollege_1_is_not_same_element_1_is_same(void);
+extern void test_UniversityCollege_2_is_same_element(void);
 extern void test_Institution_select_for_three_institution(void);
+extern void test_wasEstablishedBefore_1980_2011(void);
 
 
 //=======Mock Management=====
@@ -87,7 +91,11 @@ int main(void)
   RUN_TEST(test_Reverse_3_element_in_same_Linked_list, 45);
   RUN_TEST(test_Reverse_4_element_in_same_Linked_list, 83);
   RUN_TEST(test_Institution_select_for_two_institution, 126);
-  RUN_TEST(test_Institution_select_for_three_institution, 152);
+  RUN_TEST(test_UniversityCollege_2_is_not_same_element, 151);
+  RUN_TEST(test_UniversityCollege_1_is_not_same_element_1_is_same, 169);
+  RUN_TEST(test_UniversityCollege_2_is_same_element, 187);
+  RUN_TEST(test_Institution_select_for_three_institution, 206);
+  RUN_TEST(test_wasEstablishedBefore_1980_2011, 235);
 
   return (UnityEnd());
 }

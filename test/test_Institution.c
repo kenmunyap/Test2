@@ -148,6 +148,60 @@ void test_Institution_select_for_two_institution(){
 	 
 }
 
+void test_UniversityCollege_2_is_not_same_element(){
+	Institution dataInstitution1;
+	Institution dataInstitution2;
+	int data1;
+	int data2;
+	dataInstitution1.type = College;
+	dataInstitution2.type = University;
+	
+	InstitutionType type = UniversityCollege;
+	
+	data1 = isUniversityCollege(&dataInstitution1,&type);
+	data2 = isUniversityCollege(&dataInstitution2,&type); 
+	
+	TEST_ASSERT_EQUAL(0,data1);
+	TEST_ASSERT_EQUAL(0,data2);
+
+}
+
+void test_UniversityCollege_1_is_not_same_element_1_is_same(){
+	Institution dataInstitution1;
+	Institution dataInstitution2;
+	int data1;
+	int data2;
+	
+	dataInstitution1.type = College;
+	dataInstitution2.type = University;
+	
+	InstitutionType type = College;
+	
+	data1 = isUniversityCollege(&dataInstitution1,&type);
+	data2 = isUniversityCollege(&dataInstitution2,&type); 
+	
+	TEST_ASSERT_EQUAL(1,data1);
+	TEST_ASSERT_EQUAL(0,data2);
+}
+
+void test_UniversityCollege_2_is_same_element(){
+	Institution dataInstitution1;
+	Institution dataInstitution2;
+	int data1;
+	int data2;
+	
+	dataInstitution1.type = College;
+	dataInstitution2.type = College;
+	
+	
+	InstitutionType type = College;
+	data1 = isUniversityCollege(&dataInstitution1,&type);
+	data2 = isUniversityCollege(&dataInstitution2,&type); 
+	
+	TEST_ASSERT_EQUAL(1,data1);
+	TEST_ASSERT_EQUAL(1,data2);
+}
+
 
 void test_Institution_select_for_three_institution(){
 
@@ -177,11 +231,25 @@ void test_Institution_select_for_three_institution(){
 
 
 
-//void Stack_push(Stack *stack, void *element);
-//void *Stack_pop(Stack *stack);
-//void List_addTail(LinkedList *list, void *element);
-//void *List_removeHead(LinkedList *list);
 
+void test_wasEstablishedBefore_1980_2011(){
+	int overEstablished;
+	int checkYearEstablish;
+	Institution institute[] =  {{.type = Unknown, .yearEstablished = 1000}};
+							
+	
+	
+	InstitutionType year = 1900;
+
+	
+	Try{
+		checkYearEstablish = wasEstablishedBefore(&institute[0],&year);
+		TEST_ASSERT_EQUAL(0,checkYearEstablish);
+	}
+	Catch(overEstablished){
+		printf("The Year has been overEstablished");
+	}
+}
 
 
 
