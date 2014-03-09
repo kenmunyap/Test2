@@ -43,6 +43,8 @@ extern void tearDown(void);
 extern void test_Reverse_2_element_in_same_Linked_list(void);
 extern void test_Reverse_3_element_in_same_Linked_list(void);
 extern void test_Reverse_4_element_in_same_Linked_list(void);
+extern void test_Institution_select_for_two_institution(void);
+extern void test_Institution_select_for_three_institution(void);
 
 
 //=======Mock Management=====
@@ -81,9 +83,11 @@ int main(void)
 {
   Unity.TestFile = "test_Institution.c";
   UnityBegin();
-  RUN_TEST(test_Reverse_2_element_in_same_Linked_list, 18);
-  RUN_TEST(test_Reverse_3_element_in_same_Linked_list, 51);
-  RUN_TEST(test_Reverse_4_element_in_same_Linked_list, 89);
+  RUN_TEST(test_Reverse_2_element_in_same_Linked_list, 12);
+  RUN_TEST(test_Reverse_3_element_in_same_Linked_list, 45);
+  RUN_TEST(test_Reverse_4_element_in_same_Linked_list, 83);
+  RUN_TEST(test_Institution_select_for_two_institution, 126);
+  RUN_TEST(test_Institution_select_for_three_institution, 152);
 
   return (UnityEnd());
 }

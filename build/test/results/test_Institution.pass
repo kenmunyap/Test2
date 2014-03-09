@@ -4,19 +4,25 @@
   :file: test_Institution.c
 :successes:
 - :test: test_Reverse_2_element_in_same_Linked_list
-  :line: 18
+  :line: 12
   :message: ''
 - :test: test_Reverse_3_element_in_same_Linked_list
-  :line: 51
+  :line: 45
   :message: ''
 - :test: test_Reverse_4_element_in_same_Linked_list
-  :line: 89
+  :line: 83
+  :message: ''
+- :test: test_Institution_select_for_two_institution
+  :line: 126
+  :message: ''
+- :test: test_Institution_select_for_three_institution
+  :line: 152
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 3
-  :passed: 3
+  :total: 5
+  :passed: 5
   :failed: 0
   :ignored: 0
 :stdout: []
